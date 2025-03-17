@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+}
+
+/* Section À propos */
+.about, .team, .values, .stats, .testimonials {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #fff;
+    margin: 2rem auto;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about h2, .team h2, .values h2, .stats h2, .testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #007BFF;
+}
+
+.about-content, .team-content, .values-content, .stats-content, .testimonials-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.about-item, .team-item, .values-item, .stats-item, .testimonial-item {
+    flex: 1 1 calc(25% - 2rem); /* 4 éléments par ligne sur desktop */
+    max-width: calc(25% - 2rem);
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-item:hover, .team-item:hover, .values-item:hover, .stats-item:hover, .testimonial-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.about-item i, .values-item i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #007BFF;
+}
+
+.about-item h3, .team-item h3, .values-item h3, .stats-item h3, .testimonial-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.about-item p, .team-item p, .values-item p, .stats-item p, .testimonial-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.team-item img, .testimonial-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .about-item, .team-item, .values-item, .stats-item, .testimonial-item {
+        flex: 1 1 calc(33.333% - 2rem); /* 3 éléments par ligne sur tablette */
+        max-width: calc(33.333% - 2rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .about-item, .team-item, .values-item, .stats-item, .testimonial-item {
+        flex: 1 1 calc(50% - 2rem); /* 2 éléments par ligne sur mobile */
+        max-width: calc(50% - 2rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .about-item, .team-item, .values-item, .stats-item, .testimonial-item {
+        flex: 1 1 100%; /* 1 élément par ligne sur petit mobile */
+        max-width: 100%;
+    }
+}
